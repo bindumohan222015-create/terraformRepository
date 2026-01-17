@@ -6,6 +6,13 @@ pipeline {
     }
 
     stages {
+        stage('git checkout'){
+            steps
+            {
+                git branch:'main',
+                    url: 'https://github.com/bindumohan222015-create/terraformRepository'
+            }
+        }
 
         stage('Terraform Init') {
             steps {
@@ -35,3 +42,4 @@ pipeline {
         }
     }
 }
+
