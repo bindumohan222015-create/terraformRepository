@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/bindumohan222015-create/terraformRepository'
-            }
-        }
-
         stage('Terraform Init') {
             steps {
                 sh 'terraform init'
