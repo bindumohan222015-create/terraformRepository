@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+            terraform 'terraform-Bindu'
+            }
+
     stages {
         stage('git checkout'){
             steps
@@ -37,5 +41,6 @@ pipeline {
         }
     }
 }
+
 
 
